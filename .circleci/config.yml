@@ -8,6 +8,7 @@ jobs:
   build:
     docker:
       - image: circleci/php:7.1-node-browsers
+      - image: circleci/mysql:5.7-ram
 
       
     steps:
