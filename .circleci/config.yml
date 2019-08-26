@@ -28,7 +28,7 @@ jobs:
         - run: composer install --no-dev
         - run:
             name: Setup Laravel testing environment variables for CircleCI test
-            command: cp .env.testing .env
+            command: cp .env .env
         - save_cache:
             key: v1-dependencies-{{ checksum "composer.json" }}
             paths:
