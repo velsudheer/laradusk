@@ -42,7 +42,10 @@ jobs:
             key: node-v1-{{ checksum "composer.json" }}
             paths:
                 - node_modules
-
+        - run:
+               name: Run Laravel Server
+               command: php artisan serve
+               background: true
       # prepare the database
         #- run: touch storage/testing.sqlite
         - run: php artisan dusk --group=register
